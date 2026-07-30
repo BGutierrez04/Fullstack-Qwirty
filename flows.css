@@ -1,0 +1,39 @@
+header nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: Center;
+}
+
+header nav menu {
+  display: flex;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_body {
+  display: flex;
+}
+
+.product_categories {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+}
+
+.production_selection {
+  flex: 1;
+}
+
+.product_selection ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.page_footer {
+  display: flex;
+  justify-content: space-around;
+}
