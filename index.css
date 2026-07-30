@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: "Skranji", system-ui;
+}
+
+.product_categories {
+  /* fixed-width sidebar*/
+  padding: 1rem;
+}
+
+.product_selection a {
+  /* remaining available width*/
+  border: 1px solid #cccccc;
+}
+
+.product_selection li {
+  border: 1px solid #333333;
+}
+
+.product_selection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page_footer {
+  background-color: #333333;
+  color: white;
+}
+
+.skranji-regular {
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.skranji-bold {
+  font-family: "Skranji", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
