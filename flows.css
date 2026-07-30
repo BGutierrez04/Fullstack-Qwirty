@@ -1,22 +1,37 @@
-header nav > div {
+/* Top navigation */
+
+header nav div {
   display: flex;
   justify-content: space-between;
-  align-items: Center;
+  align-items: center;
 }
 
 header nav menu {
   display: flex;
 }
 
-header > div {
+/* Main header row */
+
+header div {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
+
+header form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Main content */
 
 .main_body {
   display: flex;
+  gap: 2rem;
+  padding: 2rem;
 }
+
+/* Category sidebar */
 
 .product_categories {
   display: flex;
@@ -24,16 +39,115 @@ header > div {
   width: 220px;
 }
 
-.production_selection {
+/* Product area */
+
+.product_selection {
   flex: 1;
 }
 
 .product_selection ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 0;
 }
+
+/* Image area */
+
+.product_selection figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Product footer */
+
+.product_selection footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Footer */
 
 .page_footer {
   display: flex;
   justify-content: space-around;
+  gap: 2rem;
+}
+
+/* Mobile menu hidden on desktop */
+
+.mobile_screen {
+  display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .main_body {
+    flex-direction: column;
+  }
+
+  .product_categories {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .product_selection ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page_footer {
+    flex-wrap: wrap;
+  }
+}
+
+/* Phone */
+
+@media (max-width: 600px) {
+  .options_menu,
+  .full_screen {
+    display: none;
+  }
+
+  .mobile_screen {
+    display: flex;
+  }
+
+  header div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header nav div {
+    flex-direction: row;
+  }
+
+  #product_search {
+    width: 100%;
+  }
+
+  .main_body {
+    padding: 1rem;
+  }
+
+  .product_categories {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .product_selection ul {
+    grid-template-columns: 1fr;
+  }
+
+  .page_footer {
+    flex-direction: column;
+  }
 }
